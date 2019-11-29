@@ -145,5 +145,6 @@ func  main()  {
 	fmt.Printf("第六行 -a 的值为 %d\n",a)
 	a--
 	fmt.Printf("第六行 -a 的值为 %d\n",a)
+	fmt.Println("--------------------------------")
 
 }

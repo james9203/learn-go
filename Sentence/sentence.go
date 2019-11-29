@@ -1,0 +1,55 @@
+package main
+
+import "fmt"
+
+func  ifsentence()  {
+	var a int = 100
+	var b int = 200
+
+	if a==100{
+		if b==200 {
+			fmt.Printf("a的值为100，b 的值为200\n")
+		}
+	}
+	fmt.Printf("a值为：%d\n",a)
+	fmt.Printf("b 值为：%d\n",b)
+
+	if a<20 {
+		fmt.Printf("a 小于20 \n")
+	}else{
+		fmt.Printf("a 不小于20 \n")
+	}
+	fmt.Printf("a 的值为： %d\n",a)
+
+}
+
+func  switchsentence(){
+	var grade string = "B"
+	var marks int = 90
+
+	switch marks {
+	case 90: grade = "A"
+	case 80: grade = "B"
+	case 50,60,70 : grade= "C"
+	default: grade = "D"
+	}
+	switch {
+	case grade == "A" :
+		fmt.Printf("优秀!\n" )
+	case grade == "B", grade == "C" :
+		fmt.Printf("良好\n" )
+	case grade == "D" :
+		fmt.Printf("及格\n" )
+	case grade == "F":
+		fmt.Printf("不及格\n" )
+	default:
+		fmt.Printf("差\n" );
+	}
+	fmt.Printf("你的等级是 %s\n", grade );
+
+}
+
+func main() {
+	switchsentence()
+	ifsentence()
+}
