@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 func  ifsentence()  {
 	var a int = 100
@@ -69,8 +72,65 @@ func  selectsentence(){
 	}
 }
 
+func typeof(v interface{}) string {
+	return reflect.TypeOf(v).String()
+}
+
+func loopsentence() {
+	sum := 0
+	for i := 0; i <= 10; i++ {
+		sum += i
+	}
+	fmt.Println(sum)
+	fmt.Println("---------------------------")
+	sum = 1
+	for ; sum <= 10; {
+		sum += sum;
+	}
+	fmt.Println(sum)
+	fmt.Println("---------------------------")
+	sum = 1
+	for sum <= 10 {
+		sum += sum
+	}
+	fmt.Println(sum)
+	fmt.Println("---------------------------")
+	sum = 0
+	for  {
+		sum++
+		if(sum==100){
+			break
+		}
+	}
+	fmt.Println(sum)
+	fmt.Println("---------------------------")
+
+	strings := []string{"google","baidu"}
+	number := []int{1,2,3,4,5,6,8899,10}
+	fmt.Println(typeof(strings))
+	fmt.Println(typeof(number))
+	for i,s := range  strings{
+		fmt.Println(i,s)
+	}
+	fmt.Println("---------------------------")
+
+	numbers := [6]int{1, 2, 3, 5}
+	for i,x:= range numbers {
+		fmt.Printf("第 %d 位 x 的值 = %d\n", i,x)
+	}
+	fmt.Println("---------------------------")
+
+
+}
+
 func main() {
+	fmt.Println("---------------------------------------")
 	selectsentence()
+	fmt.Println("---------------------------------------")
 	switchsentence()
+	fmt.Println("---------------------------------------")
 	ifsentence()
+	fmt.Println("---------------------------------------")
+	loopsentence()
+	fmt.Println("---------------------------------------")
 }
