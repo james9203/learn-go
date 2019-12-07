@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+	"log"
+)
 
 type (
 	byte1  int8
@@ -23,4 +27,15 @@ func main()  {
 	var j float32 = 1.1
 	k := int(j)
 	fmt.Println(k)
+	var l int = 65
+	n := strconv.Itoa(l)
+	m := string(l)
+	fmt.Println(m)
+	str,err :=strconv.Atoi(n)
+	if(err==nil){
+		fmt.Println(str)
+	}else{
+		log.Fatal(err)
+	}
+
 }
