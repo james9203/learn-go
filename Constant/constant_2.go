@@ -28,5 +28,22 @@ func main()  {
 	var p *int = &a
 	fmt.Println(p)
 	fmt.Println(*p)
+	for  {
+		a++
+		if a>3{
+			break
+		}
+	}
+	a=1
+	for a<=3 {
+		a++
+		fmt.Println(a)
+	}
+
+	for i:=0;i<3 ;i++  {
+		a++
+		fmt.Println(a)
+	}
+	fmt.Println("Over")
 
 }
