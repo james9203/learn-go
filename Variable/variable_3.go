@@ -20,4 +20,7 @@ func main()  {
 	//var e,f,g,h int = 1,2,3,4
 	e,f,g,h := 1,2,3,4
 	fmt.Println(e,f,g,h)
+	var j float32 = 1.1
+	k := int(j)
+	fmt.Println(k)
 }
