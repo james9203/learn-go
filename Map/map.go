@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func mapdelete()  {
+func mapdelete() {
 	/* 创建map */
 	countryCapitalMap := map[string]string{"France": "Paris", "Italy": "Rome", "Japan": "Tokyo", "India": "New delhi"}
 
@@ -24,7 +24,19 @@ func mapdelete()  {
 	}
 }
 
-func main()  {
+func map1() {
+	m1 := map[int]string{1: "a", 2: "b", 3: "c", 4: "d", 5: "e"}
+	fmt.Println(m1)
+	m2 := make(map[string]int)
+	for k, v := range m1 {
+		m2[v] = k
+	}
+	fmt.Println(m2)
+}
+
+func main() {
+	fmt.Println("--------------------------------------------")
+	map1()
 	fmt.Println("--------------------------------------------")
 	var countryCapitalMap map[string]string /*创建集合 */
 	countryCapitalMap = make(map[string]string)
