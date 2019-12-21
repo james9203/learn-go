@@ -10,13 +10,15 @@ func main() {
 	var p float64 = 99
 	var c int
 	var e string
-	var g map[int] string
+	var g map[int]string
 	a := unsafe.Sizeof(p)
 	d := unsafe.Sizeof(c)
 	f := unsafe.Sizeof(e)
+	k := unsafe.Alignof(p)
 	fmt.Println(d)
 	fmt.Println(f)
 	fmt.Println(g)
 	fmt.Println(a)
+	fmt.Println(k)
 
 }
