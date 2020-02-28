@@ -5,14 +5,12 @@ import (
 	"strings"
 	"strconv"
 	"fmt"
-	"text/scanner"
-	"os"
 )
 
 func main() {
 	const input = "1234 5678 12345678901234567890"
 
-	sacnner := bufio.NewScanner(os.Stdin)
+	scanner := bufio.NewScanner(strings.NewReader(input))
 
 	split := func(data []byte, atEOF bool) (advance int, token []byte, err error) {
 		advance, token, err = bufio.ScanWords(data, atEOF)
@@ -21,12 +19,12 @@ func main() {
 		}
 		return
 	}
-	sacnner.Split(split)
-	for sacnner.Scan() {
+	scanner.Split(split)
+	for scanner.Scan() {
 		fmt.Printf("%s\n", scanner.Text())
 	}
 
-	if err := sacnner.Err(); err != nil {
+	if err := scanner.Err(); err != nil {
 		fmt.Printf("Invalid input:%s", err)
 	}
 
