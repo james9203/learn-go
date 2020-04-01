@@ -35,6 +35,9 @@ func map1() {
 }
 
 func main() {
+	m1 := map[int]string{1: "a", 2: "b", 3: "c", 4: "d", 5: "e"}
+	fmt.Println(m1)
+	return
 	fmt.Println("--------------------------------------------")
 	map1()
 	fmt.Println("--------------------------------------------")
